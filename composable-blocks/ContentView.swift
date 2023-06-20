@@ -24,7 +24,7 @@ struct ContentView: View {
                     Button {
                         viewStore.send(.randomClick)
                     } label: {
-                        Text("Randomise Counter")
+                        Text("Randomize Counter")
                     }
                     .padding()
                 }

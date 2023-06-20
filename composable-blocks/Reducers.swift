@@ -25,11 +25,11 @@ struct MainReducer: Reducer {
                 state.counterState.value = state.counterState.value - 1
             case .increment:
                 state.counterState.value = state.counterState.value + 1
-            case .randomise:
+            case .randomize:
                 state.counterState.value = Int.random(in: 1...1000)
             }
         case .randomClick:
-            return .send(.counterAction(.randomise))
+            return .send(.counterAction(.randomize))
         }
 
         return .none
@@ -44,7 +44,7 @@ struct CounterReducer: Reducer {
     }
 
     enum Action {
-        case randomise
+        case randomize
         case increment
         case decrement
     }
@@ -59,7 +59,7 @@ struct CounterReducer: Reducer {
             state.color = 0xFF0000
         case .increment:
             state.color = 0x00FF00
-        case .randomise:
+        case .randomize:
             state.color = 0x0000FF
         }
         return .none
